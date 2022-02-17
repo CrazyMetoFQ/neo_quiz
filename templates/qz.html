@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+
+    <title>Quiz</title>
+
+</head>
+
+<body>
+
+    <div id="formWrapper">
+
+        <p id="formTitle">Answer These</p>
+        <br>
+        <form method="POST">
+
+            <div>
+                {{aform.hidden_tag()}}
+            </div>
+
+            <div>
+                {% for sn,q,rq in zzz %}
+
+                <p class="formGroup">
+
+                    <p class="question">{{sn}}: {{q.label()}}</p>
+
+                    <ul class="options">
+                        {% for opt in q %}
+                        <li>
+                            {{opt(class_="options-opt-main")}} {{opt.label(class_="options-opt")}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+
+                    <span class="answer">{{b2c(rq.check(q.data),q.data)}}</span>
+
+                </p>
+
+                {%endfor%}
+
+            </div>
+
+            <div>
+                {{aform.submit(class_="sumbit")}}
+            </div>
+
+        </form>
+
+        <a href="{{url_for('updateform')}}" id="update-a">
+        
+            <div  id = "update">                
+                    Update
+            </div>
+            
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>

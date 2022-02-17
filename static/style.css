@@ -1,0 +1,190 @@
+ 
+
+
+ :root{
+ 	--ngra: #f2f2f2;
+ }
+
+
+/*html,body{
+
+  height: 99%;
+  width: 99%;
+
+}*/
+
+body{
+  background-color: slategray;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  overflow: auto;
+}
+
+#formWrapper{
+
+  overflow: visible;
+  background-color: var(--ngra);
+  width: 40%;
+  min-width: fit-content;
+  max-width: 60%;
+
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+
+
+  border-radius: 20px;
+  padding: 5%;
+
+  position: relative;
+
+
+}
+
+#formTitle{
+
+  font-family: monospace;
+  text-decoration: underline;
+  font-size: xx-large;
+
+  flex-shrink: 3;
+}
+
+
+#update{
+
+  padding: 20px;
+  margin-top: 5px;
+  min-width: fit-content;
+  background-color: cornflowerblue;
+  
+}
+
+#update-a{
+
+  text-decoration: none;
+  color: ghostwhite;
+  font-size: large;
+  font-stretch: ultra-expanded;
+
+}
+
+#update:hover{
+  background-color: lightcoral;
+  padding: 30px;
+}
+
+
+.fullQuestion{
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  /*margin: 2%;*/
+  padding: 3%;
+}
+
+.question{
+
+  display: flex;
+  color: black;
+  font-size: large;
+  font-family: sans-serif;
+
+  /*  width: fit-content;
+  height: fit-content;*/
+  padding: 10px;
+  vertical-align: middle;
+
+
+}
+
+.options{
+
+  list-style-type: none;
+
+}
+
+.options-opt{
+  
+  font-size: large;
+  font-family: cursive;
+
+  width: fit-content;
+  padding: 12px 20px;
+  margin: 8px 0;
+  
+  display: inline-block;
+  flex-direction: row;
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  vertical-align: middle;
+
+}
+
+.options-opt:hover{
+
+  background-color: cadetblue ;
+  padding: 20px;
+}
+
+.options-opt-main{
+
+  appearance: none ;
+}
+
+.options-opt-main:checked ~ .options-opt{
+
+  background-color: pink;
+}
+
+.answers{
+
+
+  display: flex;
+
+  font-family: fantasy;
+  font-size: medium;
+
+  padding: 10px;
+  margin: 5px;
+  background-color: blanchedalmond;
+
+}
+
+
+.sumbit{
+
+  background-color: #4CAF50;
+  color: white;
+
+  padding: 14px 20px;
+
+  border: none;
+  cursor: pointer;
+}
+
+.sumbit:hover {
+
+  background-color: darkseagreen;
+}
+
+
+
+
